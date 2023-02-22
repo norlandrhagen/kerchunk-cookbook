@@ -4,14 +4,16 @@ channels:
 dependencies:
   - cfgrib
   - dask
+  - distributed=2023.1.0
   - h5py
   - h5netcdf
   - jupyter-book
-  - jupyterlab
+  - jupyterlab=3
   - jupyter_server<2
   - pip
   - fsspec
   - matplotlib
+  - mamba
   - netcdf4
   - numcodecs
   - numpy
@@ -26,5 +28,4 @@ dependencies:
   - dask-labextension
   - ipywidgets
   - pip:
-      - sphinx-pythia-theme
       - git+https://github.com/fsspec/kerchunk.git
