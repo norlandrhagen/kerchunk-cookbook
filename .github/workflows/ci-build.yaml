@@ -26,14 +26,4 @@ jobs:
       - name: Build
         shell: bash -l {0}
         run: |
-          python prep.py --small
           sphinx-build -M html . _build -v
-
-      - name: Deploy
-        if: ${{ github.ref == 'refs/heads/main' && github.event_name != 'pull_request'}}
-        uses: JamesIves/github-pages-deploy-action@3.7.1
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: _build/html
-          CLEAN: true
